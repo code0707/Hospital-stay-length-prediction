@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Home Page</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	 <h3>created by Soham Chakraborty</h3>
+  
+	<br>
+  {{ text }}
+  <br>
+	<form action="{{ url_for('login')}}">
+    	    <button type="submit" class="btn btn-primary btn-block btn-large">Login</button>
+	</form>
+	
+	<form action="{{ url_for('signup')}}">
+		<button type="submit" class="btn btn-primary btn-block btn-large">Signup</button>
+	</form>
+
+ </div>
+
+
+</body>
+</html>

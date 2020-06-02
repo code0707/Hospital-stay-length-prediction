@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="static/css/style.css" type = text/css>
+<!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+
+<!------ Include the above in your HEAD tag ---------->
+<div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                        <h3>Welcome To LOS Finder</h3>
+                        <p>Please Enter All fields</p>
+                        <input type="submit" name="" value="Click to See Visualizations"/><br/>
+                    </div>
+                    <div class="col-md-9 register-right">
+
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Find Out the Length Of Stay</h3>
+                                
+                                <form action="{{ url_for('predict')}}"method="post">
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="pro_code" placeholder="Procedure Code" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                           <input type="text" class="form-control" name="mod_code" placeholder="MOD Code" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="faclnbr" placeholder="faclnbr" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="age" placeholder="Age" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="sex" placeholder="Gender" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="dischstat" placeholder="dischstat" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="ptcounty" placeholder="ptcounty" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="admitdiag" placeholder="admitdiag" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            
+                                            <select name="cars" class="form-control" id="cars">
+                                                <optgroup>
+                                                  <option value=1>1</option>
+                                                  <option value=2>2</option>
+                                                  <option value=3>3</option>
+                                                  <option value=4>4</option>
+                                                </optgroup>
+                                               
+                                              </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="roomchgs" placeholder="Room Charges" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="icuchgs" placeholder="ICU charges" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="ccuchgs" placeholder="CCU chgs" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="pharmchgs" placeholder="Pharma Charges" required="required" />
+                                        </div>
+
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="medchgs" placeholder="Medical Charges" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="oncochgs" placeholder="Oncology Charges" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="labchgs" placeholder="Lab Charges" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="radchgs" placeholder="Radiology Charges" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="oprmchgs" placeholder="OPrm Charges" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="aneschgs" placeholder="anesthesia Charges" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="respchgs" placeholder="Resp Charges" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="erchgs" placeholder="Erc Charges" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="cardiochgs" placeholder="Cardio Charges" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="traumachgs" placeholder="Trauma Charges" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="laborchgs" placeholder="Labor Charges" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="behavchgs" placeholder="Behav Charges" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="otherchgs" placeholder="Other Charges" required="required" />
+                                        </div>
+                                        
+                                    </div>
+                                    <input type="submit" class="btnRegister"  value="SUBMIT"/>
+                                    <br>
+                                    {{ prediction_text }}
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+</body>
+</html>
